@@ -3,6 +3,7 @@ import {
   update as updateSnake,
   draw as drawSnake,
 } from "./snake.js";
+import { update as updateFood, draw as drawFood } from "./food.js";
 
 let lastRenderTime = 0;
 const gameBoard = document.getElementById("game-board");
