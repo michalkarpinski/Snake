@@ -12,7 +12,7 @@ function main(currentTime) {
 
   const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
 
-  if (secondsSinceLastRender < SNAKE_SPEED) return;
+  if (secondsSinceLastRender < 1 / SNAKE_SPEED) return;
 
   lastRenderTime = currentTime;
 
@@ -24,9 +24,11 @@ window.requestAnimationFrame(main);
 
 function update() {
   updateSnake();
+  updateFood();
 }
 
 function draw() {
   gameBoard.innerHTML = "";
   drawSnake(gameBoard);
+  drawFood(gameBoard);
 }
